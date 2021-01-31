@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+
+* {
+  box-sizing: border-box; /* when we add any border or padding to an element it won't affect it's width */
+}
+
+body {
+  font-family: 'Black Ops One', cursive;
+  background-color: rgb(12, 12, 12);
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+h1 {
+  color: rgb(255, 255, 255);
+  font-size: 13em;
+  opacity: 0.2;
+  transition: all 3s ease-in-out;
+  animation: blinking 3s infinite;
+  transform: scale(1);
+}
+
+h1:hover {
+  transform: scale(1.7) translateX(-450px);
+  transition: all 3s ease-in-out;
+}
+
+.name {
+  color: #fff;
+}
+
+.fed {
+  opacity: 0;
+  font-size: 20px;
+  position: absolute;
+}
+
+h1:hover .name {
+  color: aqua;
+  transition: color 3s ease-in-out;
+}
+
+h1:hover .fed {
+  color: #fff;
+  opacity: 1;
+  transition: all 3s ease;
+}
+
+@keyframes blinking {
+  0% {
+    opacity: 0.1;
+    color: #fff;
+  }
+  25% {
+    opacity: 0.3;
+    color: #fff;
+  }
+  50% {
+    opacity: 0;
+    color: #fff;
+  }
+  75% {
+    opacity: 0.9;
+    color: #fff;
+  }
+  100% {
+    opacity: 0.9;
+    color: #fff;
+  }
+}
